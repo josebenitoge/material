@@ -28,7 +28,7 @@ class PopupMenu {
       li.setAttribute("value", o);
       li.onclick = () => {
         menu.remove();
-        onclick(li);
+        onclick(o);
       };
       ul.appendChild(li);
     }
@@ -76,7 +76,7 @@ class PopupOptions {
       li.setAttribute("value", o);
       li.onclick = () => {
         div.remove();
-        onclick(li);
+        onclick(o);
       };
       ul.appendChild(li);
     }
@@ -112,7 +112,7 @@ class PopupDialog {
       );
       button.onclick = () => {
         div.remove();
-        onclick(button);
+        onclick(b["name"]);
       };
       section.appendChild(button);
     }

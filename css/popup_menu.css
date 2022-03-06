@@ -30,7 +30,7 @@ menu ul {
   height: 100%;
   margin: 0;
   padding: 5% 0%;
-  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.075);
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.144);
   background-color: var(--bg2);
   overflow-y: auto;
 

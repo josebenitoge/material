@@ -1,0 +1,39 @@
+@keyframes full_appear {
+  0% {
+    background-size: 140%;
+  }
+}
+
+.full {
+  color: white;
+  display: block;
+  padding: 0;
+  height: 300px;
+  text-align: center;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: rgb(53, 85, 230);
+
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0s;
+
+  animation-duration: 0.5s;
+  animation-name: full_appear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.full h1 {
+  padding: 0;
+  margin: 0px 10%;
+  display: block;
+  font-family: spartan_black;
+}
+
+.full p {
+  padding: 0;
+  margin: 0px 10%;
+  display: block;
+}

@@ -44,8 +44,8 @@
       </code>
       theme_dark.css
       <p>
-        You obviosly need to create your style.css also. You should use variables instead of
-        code colors in your style.css
+        You obviosly need to create your style.css also. You should use
+        variables instead of code colors in your style.css
       </p>
       <code>
         body{ <br />
@@ -63,13 +63,22 @@
         href="css/theme_light.css" /&gt;</code
       >
       <p>Also you have to include the javascript code</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/theme.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/theme.js"&gt;&lt;/script&gt;</code
+      >
       <button onclick="skin();">Change theme here</button>
       <h1>How to pop up a notification</h1>
       <p>You have to add "css/popup_dialog.css" first.</p>
-      <code>&lt;link rel="stylesheet" href="https://josebenitoge.github.io/material/css/popup_dialog.css"&gt;</code>
+      <code
+        >&lt;link rel="stylesheet"
+        href="https://josebenitoge.github.io/material/css/popup_dialog.css"&gt;</code
+      >
       <p>Now you should also add "js/popup.js"</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code
+      >
       <p>
         Create your code for notification. In order to that you should call
         PopupNotification.show(title, content, seconds). Here an example
@@ -81,9 +90,15 @@
         Creating a dialog is pretty similar to creating a notification. First
         thing you have to do is adding "css/popup_dialog.css"
       </p>
-      <code>&lt;link rel="stylesheet" href="https://josebenitoge.github.io/material/css/popup_dialog.css"&gt;</code>
+      <code
+        >&lt;link rel="stylesheet"
+        href="https://josebenitoge.github.io/material/css/popup_dialog.css"&gt;</code
+      >
       <p>Next you should add "js/popup.js" as well</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code
+      >
       <p>
         In order to code your notification. You have to call
         PopupDialog.show(title, mesage, buttons, onclick) function. The buttons
@@ -108,9 +123,15 @@
       <button onclick="dialog();">Popup dialog</button>
       <h1>How to create a left side menu</h1>
       <p>To create a left side menu you have to add "css/popup_menu.css"</p>
-      <code>&lt;link rel="stylesheet" href="https://josebenitoge.github.io/material/css/popup_menu.css"&gt;</code>
+      <code
+        >&lt;link rel="stylesheet"
+        href="https://josebenitoge.github.io/material/css/popup_menu.css"&gt;</code
+      >
       <p>Then you should add "js/popup.js" as well</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code
+      >
       <p>
         In your javascript code you should call PopupMenu.show(title, options,
         onclick). "options" variable is an array where each element is a string
@@ -129,9 +150,15 @@
       <button onclick="pop();">Pop up menu</button>
       <h1>How to create an options menu</h1>
       <p>Firt you have to add "css/popup_options.css" in your HTML head.</p>
-      <code>&lt;link rel="stylesheet" href="https://josebenitoge.github.io/material/css/popup_options.css"&gt;</code>
+      <code
+        >&lt;link rel="stylesheet"
+        href="https://josebenitoge.github.io/material/css/popup_options.css"&gt;</code
+      >
       <p>Next you have to add your "js/popup.js" javascript file.</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code
+      >
       <p>
         In your code you have to call PopupOptions.show(title, options,
         onclick). "options" variable is an array that contains the options.
@@ -157,12 +184,21 @@
         You should give your nav an id. The id should be "nav" so it can work.
         Next thing you will do is adding "js/nav.js"
       </p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/nav.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/nav.js"&gt;&lt;/script&gt;</code
+      >
       <h1>How to pop up a form</h1>
       <p>First include "css/popup_form.css" in you HTML head.</p>
-      <code>&lt;link rel="stylesheet" href="https://josebenitoge.github.io/material/css/popup_form.css"&gt;</code>
+      <code
+        >&lt;link rel="stylesheet"
+        href="https://josebenitoge.github.io/material/css/popup_form.css"&gt;</code
+      >
       <p>Next include "js/popup.js"</p>
-      <code>&lt;script src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code>
+      <code
+        >&lt;script
+        src="https://josebenitoge.github.io/material/js/popup.js"&gt;&lt;/script&gt;</code
+      >
       <p>
         In your code you should call PopupForm.show(title, elements) where
         elements is an array of elements. The function returns the form
@@ -223,21 +259,19 @@
     <script src="js/theme.js"></script>
     <script>
       function pop() {
-        PopupMenu.show(
-          "Menu principal",
-          ["Home", "Contacts", "Settings"],
-          (li) => {
-            console.log(li);
-          }
-        );
+        PopupMenu.show("Menu principal", ["Home", "Components"], (o) => {
+          if (o == "Home") link = "index.html";
+          if (o == "Components") link = "components.html";
+          window.location = link;
+        });
       }
 
       function options() {
         PopupOptions.show(
           "My menu options",
           ["Option 1", "Option 2", "Another option"],
-          (li) => {
-            console.log(li);
+          (o) => {
+            console.log(o);
           }
         );
       }

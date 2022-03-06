@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/list.css" />
     <link rel="stylesheet" href="css/list_product.css" />
     <link rel="stylesheet" href="css/list_img.css" />
-    <link rel="stylesheet" href="css/table.css">
-    <link rel="stylesheet" href="css/popup_form.css">
+    <link rel="stylesheet" href="css/hscroll.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" href="css/popup_form.css" />
+    <link rel="stylesheet" href="css/section_full.css" />
   </head>
   <body>
     <nav id="nav">
@@ -25,6 +27,15 @@
         <li><a href="components.html">components</a></li>
       </ul>
     </nav>
+    <div class="full" style="background-image: url('img/c.jpg')">
+      <h1>Hola mundo</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, quidem?
+        Tempore, laudantium, adipisci facere corrupti, ipsa velit labore vitae
+        assumenda quasi earum blanditiis doloremque modi doloribus molestiae.
+        Quisquam, deleniti vitae.
+      </p>
+    </div>
     <section class="text">
       <h1>This is a title</h1>
       <p>
@@ -113,6 +124,36 @@
           <p>This is an image</p>
         </span>
       </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
+      <section style="background-image: url('img/b.jpg')">
+        <span>
+          <p>This is an image</p>
+        </span>
+      </section>
     </div>
     <div class="table">
       <table>
@@ -173,7 +214,6 @@
           <td class="red">0€</td>
         </tr>
       </table>
-
     </div>
     <div class="plane-form">
       <form>
@@ -182,10 +222,10 @@
         <input type="text" name="" id="" placeholder="Nombre de usuario" />
         <input type="password" name="" id="" placeholder="Contraseña" />
         <label for="file" class="file">
-          <input type="file" id="file"/>
+          <input type="file" id="file" />
           Seleccione una foto
         </label>
-        <input type="button" value="Iniciar sesion"/>
+        <input type="button" value="Iniciar sesion" />
         <select>
           <option value="">Opcion</option>
           <option value="">Opcion</option>
@@ -196,7 +236,7 @@
         <textarea name="" id="" cols="30" rows="10"></textarea>
         <p>Si aun no esta registrado puede <a href="#">registrase</a> aqui</p>
       </form>
-</div>
+    </div>
     <footer>
       <section>
         <h1>Menu</h1>
@@ -227,10 +267,9 @@
     <script src="js/popup.js"></script>
     <script>
       function pop() {
-        PopupMenu.show("Menu principal", ["Home", "Components"], (li) => {
-          let link = "index.html";
-          if (li.value == "Home") link = "index.html";
-          if (li.value == "Componets") link = "componets.html";
+        PopupMenu.show("Menu principal", ["Home", "Components"], (o) => {
+          if (o == "Home") link = "index.html";
+          if (o == "Components") link = "components.html";
           window.location = link;
         });
       }
