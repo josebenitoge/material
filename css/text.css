@@ -1,55 +1,58 @@
-.text{
-    display: block;
-    margin: 0px 10%;
+.text {
+  display: block;
+  margin: 0px 10%;
 }
 
-.text h1{
-    padding: 0;
-    margin: 0;
-    color: var(--fg);
-    font-size: 300%;
-    font-family: spartan_bold;
+.text h1 {
+  padding: 0;
+  margin: 0;
+  color: var(--fg);
+  font-size: 300%;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: spartan_bold;
 }
 
-.text p{
-    color: var(--midle);
+.text p {
+  color: var(--midle);
 }
 
-a{
-    color: var(--skin);
-    text-decoration: none;
+a {
+  color: var(--skin);
+  text-decoration: none;
 }
 
-a:hover{
-    text-decoration: underline;
+a:hover {
+  text-decoration: underline;
 }
 
-.text button{
-    margin: 10px;
-    padding: 10px 25px;
-    border: 0;
-    border-radius: 5px;
-    font-size: 100%;
-    color: var(--skin);
-    background-color: transparent;
-    cursor: pointer;
+.text button {
+  margin: 10px;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 100%;
+  color: var(--skin);
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.text button:hover{
-    background-color: var(--skin2);
+.text button:hover {
+  background-color: var(--skin2);
 }
 
-.text button:active{
-    background-color: var(--skin3);
+.text button:active {
+  background-color: var(--skin3);
 }
 
-.text code{
-    border-radius: 10px;
-    background-color: rgb(53, 53, 53);
-    padding: 20px 10px;
-    color: rgba(255, 248, 233, 0.884);
-    user-select: all;
-    font-size: 120%;
-    display: block;
-    word-wrap: break-word;
+.text code {
+  border-radius: 10px;
+  background-color: rgb(53, 53, 53);
+  padding: 20px 10px;
+  max-width: 300px;
+  color: rgba(255, 248, 233, 0.884);
+  user-select: all;
+  font-size: 120%;
+  display: block;
+  word-wrap: break-word;
 }
