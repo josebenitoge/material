@@ -1,0 +1,62 @@
+
+footer {
+  background-color: var(--bg2);
+  box-shadow: 0px -1px 0px var(--border);
+  text-align: center;
+}
+
+footer section {
+  margin: 0px 1%;
+  padding: 0px 1%;
+  display: inline-block;
+}
+
+footer section h1 {
+  padding: 0;
+  bottom: 0;
+  font-size: 120%;
+  color: var(--border);
+}
+
+footer section ul a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--midle);
+}
+
+footer section ul a:hover {
+  text-decoration: underline;
+}
+
+footer section ul a li {
+  margin: 5px 0px;
+}
+
+/*
+<footer>
+      <section>
+        <h1>Menu</h1>
+        <ul>
+          <a href="#"><li>Inicio</li></a>
+          <a href="#"><li>Nosotros</li></a>
+          <a href="#"><li>Contactar</li></a>
+        </ul>
+      </section>
+      <section>
+        <h1>Redes sociales</h1>
+        <ul>
+          <a href="#"><li>Facebook</li></a>
+          <a href="#"><li>Instagram</li></a>
+          <a href="#"><li>Twiter</li></a>
+        </ul>
+      </section>
+      <section>
+        <h1>Web</h1>
+        <ul>
+          <a href="#"><li>Publicidad</li></a>
+          <a href="#"><li>Privacidad</li></a>
+          <a href="#"><li>Terminos</li></a>
+        </ul>
+      </section>
+    </footer>
+*/

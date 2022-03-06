@@ -1,0 +1,43 @@
+.table {
+  padding: 0px 5%;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table tbody {
+  display: table;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+/*
+<div class="table">
+      <table>
+        <tr>
+          <th>id</th>
+          <th>origen</th>
+          <th>destinatario</th>
+          <th>fecha</th>
+          <th>monto</th>
+          <th>tasa</th>
+        </tr>
+        <tr>
+          <td class="grey">10</td>
+          <td class="blue">yo</td>
+          <td>el</td>
+          <td class="grey">20-12-2022</td>
+          <td class="green">0€</td>
+          <td class="red">0€</td>
+        </tr>
+      </table>
+    </div>
+*/

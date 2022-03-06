@@ -1,0 +1,16 @@
+:root {
+  --fg: #000000;
+  --bg: #ffffff;
+  --bg2: #ffffff;
+  --midle: #0000006c;
+  --skin: rgb(26, 84, 243);
+  --skin2: rgba(26, 84, 243, 0.096);
+  --skin3: rgba(26, 84, 243, 0.322);
+  --border: rgba(0, 0, 0, 0.144);
+
+  --green: rgb(24, 206, 130);
+  --red: rgb(248, 11, 51);
+  --button: rgb(68, 49, 231);
+  --button_hover: rgb(51, 40, 145);
+  --disabledbg: rgba(255, 255, 255, 0.856);
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link id="skin" value="day" rel="stylesheet" href="css/theme_light.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/text.css" />
+    <link rel="stylesheet" href="css/popup_menu.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/popup_dialog.css" />
+    <link rel="stylesheet" href="css/popup_options.css" />
+    <link rel="stylesheet" href="css/popup_form.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <ul>
+        <i onclick="pop();" style="font-size: 150%">H</i>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="components.html">components</a></li>
+      </ul>
+    </nav>
+    <section class="text">
+      <h1>How to change theme (day/night)</h1>
+      <p>
+        First thing you have to do is create different css sour, one for dark
+        mode and another one for light mode
+      </p>
+      <code>
+        :root { <br />
+        &nbsp;&nbsp;--fg: #ffffff;<br />
+        &nbsp;&nbsp;--bg: #272727;<br />
+        }
+      </code>
+      theme_light.css
+      <code>
+        :root { <br />
+        &nbsp;&nbsp;--fg: #272727;<br />
+        &nbsp;&nbsp;--bg: #ffffff;<br />
+        }
+      </code>
+      theme_dark.css
+      <p>
+        You obviosly need your style.css. You should use variables instead of
+        code colors in your style.css
+      </p>
+      <code>
+        body{ <br />
+        &nbsp;&nbsp;color: var(--fg);<br />
+        &nbsp;&nbsp;background-color: var(--bg);<br />
+        } </code
+      >style.css
+      <p>
+        You have to add "css/theme_light.css" or "css/theme_dark.css" CSS links
+        in your HTML head depending on what theme you want to show as default.
+        Give the link an id so the javascript code can work well.
+      </p>
+      <code
+        >&lt;link id="skin" value="day" rel="stylesheet"
+        href="css/theme_light.css" /&gt;</code
+      >
+      <p>Include the javascript code</p>
+      <code>&lt;script src="js/theme.js"&gt;&lt;/script&gt;</code>
+      <button onclick="skin();">Change theme here</button>
+      <h1>How to pop up a notification</h1>
+      <p>You have to add "css/popup_dialog.css" first.</p>
+      <code>&lt;link rel="stylesheet" href="css/popup_dialog.css"&gt;</code>
+      <p>then you should also add "js/popup.js"</p>
+      <code>&lt;script src="js/popup.js"&gt;&lt;/script&gt;</code>
+      <p>
+        Create your code for notification. In order to that you should call
+        PopupNotification.show(title, content, seconds). Here an example
+      </p>
+      <code> PopupNotification.show("My notification","Hello world!",3); </code>
+      <button onclick="notification();">Popup notification</button>
+      <h1>How to create a dialog</h1>
+      <p>
+        Creating a dialog is pretty similar to creating a notification. First
+        thing you have to do is adding "css/popup_dialog.css"
+      </p>
+      <code>&lt;link rel="stylesheet" href="css/popup_dialog.css"&gt;</code>
+      <p>Then you should add "js/popup.js" as well</p>
+      <code>&lt;script src="js/popup.js"&gt;&lt;/script&gt;</code>
+      <p>
+        In order to code your notification. You have to call
+        PopupDialog.show(title, mesage, buttons, onclick) function. The buttons
+        variable is an array that contains objects. Each button should have name
+        and color. "onclick" its a function that will be executed when ever the
+        user clicks any button in the dialog and will pass the clicked button as
+        parameter.
+      </p>
+      <code
+        >PopupDialog.show( <br />
+        &nbsp;"My title",<br />
+        &nbsp;`Hello world!`, <br />
+        &nbsp;[ <br />
+        &nbsp;{ name: "Accept", color: "green" }, <br />
+        &nbsp;{ name: "Denie", color: "red" }, <br />
+        &nbsp;], <br />
+        &nbsp;(b) => { <br />
+        &nbsp;&nbsp;console.log(b); <br />
+        &nbsp;} <br />
+        );</code
+      >
+      <button onclick="dialog();">Popup dialog</button>
+      <h1>How to create a left side menu</h1>
+      <p>To create a left side menu you have to add "css/popup_menu.css"</p>
+      <code>&lt;link rel="stylesheet" href="css/popup_menu.css"&gt;</code>
+      <p>Then you should add "js/popup.js" as well</p>
+      <code>&lt;script src="js/popup.js"&gt;&lt;/script&gt;</code>
+      <p>
+        In your javascript code you should call PopupMenu.show(title, options,
+        onclick). "options" variable is an array where each element is a string
+        with the name of each option in the menu. "onclick" is called whenever
+        the user clicks in an option and will pass an HTML li element
+      </p>
+      <code>
+        PopupMenu.show( <br />
+        &nbsp;"Menu principal", <br />
+        &nbsp;["Home", "Contacts", "Settings"],<br />
+        &nbsp;(li) => {<br />
+        &nbsp;&nbsp;console.log(li);<br />
+        &nbsp;}<br />
+        );
+      </code>
+      <button onclick="pop();">Pop up menu</button>
+      <h1>How to create an options menu</h1>
+      <p>Firt you have to add "css/popup_options.css" in your HTML head.</p>
+      <code>&lt;link rel="stylesheet" href="css/popup_options.css"&gt;</code>
+      <p>Next you have to add your "js/popup.js" javascript file.</p>
+      <code>&lt;script src="js/popup.js"&gt;&lt;/script&gt;</code>
+      <p>
+        In your code you have to call PopupOptions.show(title, options,
+        onclick). "options" variable is an array that contains the options.
+        "onclick" is called whenever the user click an option an pass the li
+        element of the option
+      </p>
+      <code>
+        PopupOptions.show( <br />
+        &nbsp;"My options menu",<br />
+        &nbsp;[<br />
+        &nbsp;&nbsp;"Option 1",<br />
+        &nbsp;&nbsp;"Option 2",<br />
+        &nbsp;&nbsp;"Another option",<br />
+        &nbsp;],<br />
+        &nbsp;(li) => {<br />
+        &nbsp;&nbsp;&nbsp;console.log(li);<br />
+        &nbsp;}<br />
+        );
+      </code>
+      <button onclick="options();">Pop up options</button>
+      <h1>How to give your nav a shadow on scrolling</h1>
+      <p>
+        You should give your nav an id. The id should be "nav" so it can work.
+        Next thing you will do is adding "js/nav.js"
+      </p>
+      <code>&lt;script src="js/nav.js"&gt;&lt;/script&gt;</code>
+      <h1>How to pop up a form</h1>
+      <p>Firs include "css/popup_form.css" in you HTML head.</p>
+      <code>&lt;link rel="stylesheet" href="css/popup_form.css"&gt;</code>
+      <p>Next include "js/popup.js"</p>
+      <code>&lt;script src="js/popup.js"&gt;&lt;/script&gt;</code>
+      <p>
+        In your code you should call PopupForm.show(title, elements) where
+        elements is an array of elements. The function returns the form
+      </p>
+      <code>
+        let user_name = document.createElement("input");<br />
+        user_name.type = "text";<br />
+        user_name.placeholder = "User name";<br />
+        let password = document.createElement("input");<br />
+        password.type = "password";<br />
+        password.placeholder = "Password";<br />
+
+        let login = document.createElement("input");<br />
+        login.type = "button";<br />
+        login.value = "Log in";<br />
+        let dialog = PopupForm.show("Welcome", [<br />
+        &nbsp;user_name,<br />
+        &nbsp;password,<br />
+        &nbsp;login,<br />
+        ]);<br />
+        login.onclick = () => {<br />
+        &nbsp;dialog.remove();<br />
+        };
+      </code>
+      <button onclick="myform();">Pop up a form</button>
+    </section>
+
+    <footer>
+      <section>
+        <h1>Menu</h1>
+        <ul>
+          <a href="#"><li>Inicio</li></a>
+          <a href="#"><li>Nosotros</li></a>
+          <a href="#"><li>Contactar</li></a>
+        </ul>
+      </section>
+      <section>
+        <h1>Redes sociales</h1>
+        <ul>
+          <a href="#"><li>Facebook</li></a>
+          <a href="#"><li>Instagram</li></a>
+          <a href="#"><li>Twiter</li></a>
+        </ul>
+      </section>
+      <section>
+        <h1>Web</h1>
+        <ul>
+          <a href="#"><li>Publicidad</li></a>
+          <a href="#"><li>Privacidad</li></a>
+          <a href="#"><li>Terminos</li></a>
+        </ul>
+      </section>
+    </footer>
+
+    <script></script>
+    <script src="js/popup.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+      function pop() {
+        PopupMenu.show(
+          "Menu principal",
+          ["Home", "Contacts", "Settings"],
+          (li) => {
+            console.log(li);
+          }
+        );
+      }
+
+      function options() {
+        PopupOptions.show(
+          "My menu options",
+          ["Option 1", "Option 2", "Another option"],
+          (li) => {
+            console.log(li);
+          }
+        );
+      }
+
+      function dialog() {
+        PopupDialog.show(
+          "My title",
+          `Hello world!`,
+          [
+            { name: "Accept", color: "green" },
+            { name: "Denie", color: "red" },
+          ],
+          (b) => {
+            console.log(b);
+          }
+        );
+      }
+
+      function myform() {
+        let nombre = document.createElement("input");
+        nombre.type = "text";
+        nombre.placeholder = "User name";
+        let clave = document.createElement("input");
+        clave.type = "password";
+        clave.placeholder = "Password";
+
+        let entrar = document.createElement("input");
+        entrar.type = "button";
+        entrar.value = "Login";
+        let dialog = PopupForm.show("Welcome", [nombre, clave, entrar]);
+        entrar.onclick = () => {
+          dialog.remove();
+        };
+      }
+
+      function notification() {
+        PopupNotification.show("My notification", "Hello world", 3);
+      }
+    </script>
+  </body>
+</html>

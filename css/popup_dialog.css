@@ -1,0 +1,79 @@
+@keyframes dialog_appear {
+  0% {
+    transform: translate(0%, 100%);
+  }
+  40% {
+    transform: translate(0%, 1%);
+  }
+}
+.dialog {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.dialog section {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: var(--bg2);
+  box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.199);
+
+  animation-duration: 0.5s;
+  animation-name: dialog_appear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.dialog section h1 {
+  color: var(--fg);
+}
+
+.dialog section p {
+  max-height: 200px;
+  overflow: auto;
+  color: var(--midle);
+}
+
+.dialog section button {
+  padding: 10px 20px;
+  border: 0;
+  margin: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--button);
+
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+
+.dialog section button:hover {
+  background-color: var(--button_hover);
+  
+}
+
+.dialog section button:active {
+  color: rgba(255, 255, 255, 0.479);
+}
+
+/*
+<div class="dialog">
+  <section>
+    <h1>titulo</h1>
+    <p>parrafo</p>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+    ...
+    <button>btnn</button>
+  </section>
+</div>
+*/

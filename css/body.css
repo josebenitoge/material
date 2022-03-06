@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "spartan_black";
+  src: url("font/black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "spartan_bold";
+  src: url("font/bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "spartan_regular";
+  src: url("font/regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "spartan_thin";
+  src: url("font/thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "icon";
+  src: url("font/icons.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: spartan_regular;
+  user-select: none;
+  padding: 100px 0px 0px 0px;
+  margin: 0;
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+h1 {
+  font-family: spartan_thin;
+}
+
+i{
+  font-weight: normal;
+  font-style: normal;
+  color: var(--fg);
+  font-family: icon;
+}
+
+.red {
+  color: var(--red);
+}
+
+.skin{
+  color: var(--skin);
+}
+
+.green {
+  color: var(--green);
+}
+
+.grey {
+  color: var(--midle);
+}

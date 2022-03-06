@@ -1,0 +1,72 @@
+.product section {
+  border-radius: 10px;
+  border: 1px var(--border) solid;
+  text-align: center;
+  display: inline-block;
+  height: 350px;
+  padding: 10px 1%;
+  font-size: 150%;
+  overflow: hidden;
+  margin: 3px;
+  cursor: pointer;
+
+  transition-property: box-shadow, background-color;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+}
+
+.product section:hover{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.397);
+}
+
+.product section:active{
+    background-color: var(--skin2);
+}
+
+.product section img {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.product section div{
+    width: 150px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 20px 6%;
+}
+
+.product .name{
+    padding: 0;
+    margin: 0;
+    font-size: 80%;
+}
+
+.product .description{
+    padding: 0;
+    margin: 0;
+    font-size: 70%;
+    color: var(--midle);
+}
+
+.product .price{
+    padding: 0;
+    margin: 0;
+    font-size: 70%;
+    color: var(--skin);
+}
+
+/*
+<section>
+    <img src="img/iphone-13-pink-select-2021.jpg" alt="" />
+    <div>
+       <p class="name">iPhone 13 Pro</p>
+       <p class="description">
+            Rosa, 256GB, 5G, OLED, Super retina XDR, Chip A15 bionic, iOS
+        </p>
+        <p class="price">1100€</p>
+    </div>
+</section>
+*/

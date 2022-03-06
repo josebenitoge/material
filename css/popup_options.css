@@ -1,0 +1,65 @@
+@keyframes options_appear {
+  0% {
+    transform: scale(1, 0.2);
+  }
+}
+.options {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.options ul {
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  height: 350px;
+  position: relative;
+  overflow-x: auto;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.315);
+  border-radius: 20px;
+  background-color: var(--bg2);
+
+  animation-duration: 0.2s;
+  animation-name: options_appear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.options h1 {
+  color: var(--fg);
+  padding: 5px 30px;
+}
+
+.options li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 120%;
+  padding: 10px 30px;
+  color: var(--skin);
+}
+
+.options li:hover {
+  background-color: rgba(129, 129, 129, 0.055);
+}
+
+.options li:focus {
+  background-color: var(--skin);
+}
+
+.options li:active {
+  background-color: var(--skin2);
+}
+
+/*
+<div class="options">
+  <ul>
+    <h1>titulo</h1>
+    <li>Hola</li>
+  </ul>
+</div>
+*/
