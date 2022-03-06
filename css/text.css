@@ -51,4 +51,5 @@ a:hover{
     user-select: all;
     font-size: 120%;
     display: block;
+    word-wrap: break-word;
 }
