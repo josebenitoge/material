@@ -4,6 +4,12 @@
   }
 }
 
+@keyframes form_bg_appear{
+  0% {
+    background-color: transparent;
+  }
+}
+
 .floating-form {
   z-index: 2;
   position: fixed;
@@ -14,6 +20,11 @@
   display: flex;
   justify-content: center;
   background-color: var(--disabledbg);
+
+  animation-duration: 1s;
+  animation-name: form_bg_appear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
 }
 
 
