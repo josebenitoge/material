@@ -6,9 +6,9 @@ nav {
   width: 100%;
   color: var(--skin);
   box-shadow: 0px 1px 0px var(--border);
-  background-color: var(--bg2);
+  background-color: transparent;
 
-  transition-property: box-shadow;
+  transition-property: all;
   transition-duration: 0.3s;
   transition-delay: 0s;
 }

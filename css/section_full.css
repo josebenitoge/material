@@ -13,13 +13,13 @@
   background-position: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: rgb(53, 85, 230);
+  background-color: var(--bg);
 
   transition-property: all;
   transition-duration: 0.5s;
   transition-delay: 0s;
 
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-name: full_appear;
   animation-iteration-count: 1;
   animation-direction: normal;

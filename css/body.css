@@ -36,7 +36,7 @@
 body {
   font-family: spartan_regular;
   user-select: none;
-  padding: 100px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   margin: 0;
   color: var(--fg);
   background-color: var(--bg);
