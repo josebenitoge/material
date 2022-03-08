@@ -9,7 +9,7 @@ nav {
   background-color: var(--bg2);
 
   transition-property: box-shadow;
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
   transition-delay: 0s;
 }
 
