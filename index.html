@@ -307,7 +307,7 @@
         entrar.value = "Login";
         let dialog = PopupForm.show("Welcome", [nombre, clave, entrar]);
         entrar.onclick = () => {
-          dialog.remove();
+          remove(dialog);
         };
       }
 

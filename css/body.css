@@ -68,3 +68,11 @@ i{
 .grey {
   color: var(--midle);
 }
+
+.dismiss{
+  filter: opacity(0%);
+  transform: scale(1.1);
+  transition-property: filter, transform;
+  transition-duration: 0.2s;
+  transition-delay: 0s;
+}

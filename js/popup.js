@@ -6,10 +6,17 @@ function dismiss(content, container) {
   });
   container.addEventListener("click", () => {
     if (!flag) {
-      container.remove();
+      remove(container);
     }
     flag = false;
   });
+}
+
+function remove(element) {
+  element.classList.add("dismiss");
+  setTimeout(() => {
+    element.remove();
+  }, 500);
 }
 
 class PopupMenu {
@@ -27,7 +34,7 @@ class PopupMenu {
       li.innerHTML = o;
       li.setAttribute("value", o);
       li.onclick = () => {
-        menu.remove();
+        remove(menu);
         onclick(o);
       };
       ul.appendChild(li);
@@ -59,7 +66,7 @@ class PopupOptions {
     let height = window.innerHeight;
     let width = window.innerWidth;
     if (width - x < 300) {
-      if(x < 300)y = y - 150;
+      if (x < 300) y = y - 150;
       else x = x - 300;
     }
     if (height - y < 350) {
@@ -75,7 +82,7 @@ class PopupOptions {
       li.innerHTML = o;
       li.setAttribute("value", o);
       li.onclick = () => {
-        div.remove();
+        remove(div);
         onclick(o);
       };
       ul.appendChild(li);
@@ -111,7 +118,7 @@ class PopupDialog {
         "background-color: var(--" + b["color"] + ");"
       );
       button.onclick = () => {
-        div.remove();
+        remove(div);
         onclick(b["name"]);
       };
       section.appendChild(button);
@@ -139,7 +146,7 @@ class PopupNotification {
     section.appendChild(p);
 
     setTimeout(() => {
-      div.remove();
+      remove(div);
     }, time * 1000);
 
     dismiss(section, div);
