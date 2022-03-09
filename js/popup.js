@@ -16,7 +16,7 @@ function remove(element) {
   element.classList.add("dismiss");
   setTimeout(() => {
     element.remove();
-  }, 500);
+  }, 200);
 }
 
 class PopupMenu {
